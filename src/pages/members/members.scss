@@ -1,0 +1,32 @@
+$categories: (
+ FV00: color($colors, primary),
+ FV01: #AC282B,
+ FV02: #8E8D93,
+ FV03: #FE4C52,
+ FV04: #FD8B2D,
+ FV05: #FED035,
+ FV06: #69BB7B,
+ FV07: #3BC7C4,
+ FV08: #B16BE3,
+ FV09: #6600CC,
+ FV10: #4500AD,
+ FV11: #2211AC,
+);
+
+@function auxiliary-categories() {
+  @return map-remove($categories);
+}
+
+members {
+  @each $id, $value in auxiliary-categories() {
+   ion-item-sliding[memberId=#{$id}] ion-label {
+     border-left: 2px solid $value;
+     padding-left: 10px;
+   }
+  }
+
+   ion-content {
+        background-image: url('../assets/img/background.jpg') !important;
+    }
+}
+

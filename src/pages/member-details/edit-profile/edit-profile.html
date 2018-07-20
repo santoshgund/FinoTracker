@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Edit Profile</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openMenu()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content has-header="true" padding="true">
+    <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files[]" (change)="processWebImage($event)" />
+    <ion-grid style="height: 85%">
+        <ion-row justify-content-center align-items-center style="height: 100%">
+              <img src={{profilePic}} height="60%" width="100%">
+        </ion-row>
+    </ion-grid>
+</ion-content>

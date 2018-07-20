@@ -1,0 +1,16 @@
+home {
+    .scroll-content {
+        overflow-y: auto !important;
+    }
+    ion-card-header {
+        font-weight: bold;
+    }
+    .home-icon {
+        font-size: 60px; // color: lightcoral;
+        color: tomato;
+    }
+    ::-webkit-scrollbar,
+    *::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Members List</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addMember()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-searchbar #mySearchbar color="primary" [(ngModel)]="queryText" (ionInput)="searchMember($event)" (cancel)="onCancel()"
+      placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-list #scheduleList>
+    <ion-item-sliding *ngFor="let member of membersData" #slidingItem [attr.memberId]="member.memberId">
+
+      <button ion-item (click)="goToMemberDetail(member)">
+          <ion-avatar item-start>
+            <img src={{member.profilePic}}>
+          </ion-avatar>
+          <h3>{{member.memberName}}</h3>
+          <p>{{member.memberId}}
+            {{member.contactNumber}}</p>
+        </button>
+      <ion-item-options side="left">
+        <button ion-button color="danger" expandable (click)="deleteMember(member._id)"><ion-icon name='trash'></ion-icon></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

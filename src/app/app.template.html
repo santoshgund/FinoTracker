@@ -10,7 +10,16 @@
     </ion-header>
 
     <ion-content class="outer-content">
-
+      <ion-list>
+        <ion-list-header>
+          Members
+        </ion-list-header>
+        <button ion-item menuClose *ngFor="let p of memberPages" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+      
       <ion-list>
         <ion-list-header>
           Navigate
@@ -54,6 +63,15 @@
     </ion-header>
 
     <ion-content class="outer-content">
+      <ion-list>
+        <ion-list-header>
+          Members
+        </ion-list-header>
+        <button ion-item menuClose *ngFor="let p of memberPages" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
 
       <ion-list>
         <ion-list-header>
@@ -84,6 +102,8 @@
           Show Tutorial
         </button>
       </ion-list>
+
+
 
     </ion-content>
 

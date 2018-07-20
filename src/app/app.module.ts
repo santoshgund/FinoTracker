@@ -8,7 +8,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { IonicStorageModule } from '@ionic/storage';
-
+import { Camera } from '@ionic-native/camera';
 import { ConferenceApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
@@ -25,9 +25,17 @@ import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SupportPage } from '../pages/support/support';
+import { MemberDetailsPage } from '../pages/member-details/member-details';
+import { MembersPage } from '../pages/members/members';
+import { MemberCreatePage } from '../pages/member-create/member-create';
+import { EditProfilePage } from '../pages/member-details/edit-profile/edit-profile';
+import { EditProfilePopoverPage } from '../pages/member-details/edit-profile-popover/edit-profile-popover';
+import { HomePage } from '../pages/home/home';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import { MemberData } from '../providers/member-data';
+import { MemberPassbookPage } from "../pages/member-passbook/member-passbook";
 
 
 @NgModule({
@@ -46,7 +54,15 @@ import { UserData } from '../providers/user-data';
     SpeakerListPage,
     TabsPage,
     TutorialPage,
-    SupportPage
+    SupportPage,
+    MemberDetailsPage,
+    MembersPage,
+    MemberCreatePage,
+    EditProfilePage,
+    EditProfilePopoverPage,
+    HomePage,
+    MemberPassbookPage
+
   ],
   imports: [
     BrowserModule,
@@ -65,7 +81,14 @@ import { UserData } from '../providers/user-data';
         { component: SupportPage, name: 'SupportPage', segment: 'support' },
         { component: LoginPage, name: 'LoginPage', segment: 'login' },
         { component: AccountPage, name: 'AccountPage', segment: 'account' },
-        { component: SignupPage, name: 'SignupPage', segment: 'signup' }
+        { component: SignupPage, name: 'SignupPage', segment: 'signup' },
+        { component: MemberDetailsPage, name: 'MemberDetailsPage', segment: 'memberDetails' },
+        { component: MembersPage, name: 'MembersPage', segment: 'membersList' },
+        { component: MemberCreatePage, name: 'MembersCreatePage', segment: 'membersCreate' },
+        { component: EditProfilePage, name: 'EditProfilePage', segment: 'editPrifile' },
+        { component: HomePage, name: 'HomePage', segment: 'homePage' },
+        { component: MemberPassbookPage, name: 'MemberPassbookPage', segment: 'passbook' }
+
       ]
     }),
     IonicStorageModule.forRoot()
@@ -86,14 +109,24 @@ import { UserData } from '../providers/user-data';
     SpeakerListPage,
     TabsPage,
     TutorialPage,
-    SupportPage
+    SupportPage,
+    MemberDetailsPage,
+    MembersPage,
+    MemberCreatePage,
+    EditProfilePage,
+    EditProfilePopoverPage,
+    HomePage,
+    MemberPassbookPage
+
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ConferenceData,
     UserData,
+    MemberData,
     InAppBrowser,
-    SplashScreen
+    SplashScreen,
+    Camera
   ]
 })
 export class AppModule { }

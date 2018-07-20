@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>Edit Member</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   <div text-center class="speaker-detail">
+      <img style="cursor:pointer" src={{memberDetails?.profilePic}} (click)="editProfilePicture()"><br>
+      <!--<a href="#">edit</a>-->
+      <a style="cursor:pointer" ion-link color="primary" (click)="editProfilePicture()">edit</a>
+      <!--<button (click)="editProfilePicture()"></button>-->
+  </div>
+  <ion-list>
+      <ion-item >
+        <h2>Member Id</h2>
+        <p item-end>{{memberDetails?.memberId}}</p>
+        <!--<ion-note item-end>
+          {{memberDetails?.memberId}}
+        </ion-note>-->
+      </ion-item>
+
+      <ion-item >
+        <h2>Name</h2>
+         <p item-end> {{memberDetails?.memberName}}</p>
+      </ion-item>
+
+      <ion-item >
+        <h2>Mobile</h2>
+         <p item-end>{{memberDetails?.contactNumber}}</p>
+      </ion-item>
+
+      <ion-item >
+        <h2>PhonePay</h2>   
+        <p item-end>{{memberDetails?.phonePayNumner}}</p>
+      </ion-item>
+
+      <ion-item >
+        <h2>Email</h2>
+        <p item-end>{{memberDetails?.emailAddress}}</p>
+      </ion-item>
+
+      <ion-item >
+        <h2>Bank Branch</h2>
+        <p item-end>{{memberDetails?.bankBranch}}</p>
+      </ion-item>
+
+      <ion-item >
+        <h2>Account Number</h2>
+        <p item-end>{{memberDetails?.accountnumber}}</p>
+      </ion-item>
+
+      <ion-item >
+        <h2>IFSC Code</h2>
+        <p item-end>{{memberDetails?.ifscCode}}</p>
+      </ion-item>
+
+      <ion-item >
+        <h2>Cheque Number</h2>
+        <p item-end>{{memberDetails?.chequeNumber}}</p>
+      </ion-item>
+  </ion-list>
+</ion-content>

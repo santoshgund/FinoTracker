@@ -15,6 +15,9 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { SupportPage } from '../pages/support/support';
+import { MembersPage } from '../pages/members/members';
+import { HomePage } from '../pages/home/home';
+
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -47,6 +50,12 @@ export class ConferenceApp {
     { title: 'Map', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' },
     { title: 'About', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 3, icon: 'information-circle' }
   ];
+
+  memberPages: PageInterface[] = [
+    { title: 'Home', name: 'HomePage', component: HomePage, icon: 'home' },
+    { title: 'Members', name: 'MembersPage', component: MembersPage, icon: 'person' }
+  ];
+
   loggedInPages: PageInterface[] = [
     { title: 'Account', name: 'AccountPage', component: AccountPage, icon: 'person' },
     { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
@@ -73,7 +82,8 @@ export class ConferenceApp {
     this.storage.get('hasSeenTutorial')
       .then((hasSeenTutorial) => {
         if (hasSeenTutorial) {
-          this.rootPage = TabsPage;
+          //this.rootPage = TabsPage;
+          this.rootPage = HomePage;
         } else {
           this.rootPage = TutorialPage;
         }
