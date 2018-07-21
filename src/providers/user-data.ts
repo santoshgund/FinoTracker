@@ -66,7 +66,7 @@ export class UserData {
 
   checkHasSeenTutorial(): Promise<string> {
     return this.storage.get(this.HAS_SEEN_TUTORIAL).then((value) => {
-      return value;
+      return value; 
     });
   };
 }
