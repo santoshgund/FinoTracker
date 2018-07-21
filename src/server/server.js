@@ -118,7 +118,7 @@ app.put('/api/members', function (req, res) {
 
 
 
-// // delete a review
+// // delete a member
 // app.delete('/api/reviews/:review_id', function(req, res) {
 //     Review.remove({
 //         _id : req.params.review_id
@@ -131,3 +131,4 @@ app.put('/api/members', function (req, res) {
 // listen (start app with node server.js) ======================================
 app.listen(27017);
 console.log("App listening on port 27017");
+
