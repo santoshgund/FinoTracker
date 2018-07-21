@@ -118,7 +118,7 @@ app.put('/api/members', function (req, res) {
 
 
 
-// // delete a review
+// // delete a member
 // app.delete('/api/reviews/:review_id', function(req, res) {
 //     Review.remove({
 //         _id : req.params.review_id
