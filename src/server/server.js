@@ -116,8 +116,6 @@ app.put('/api/members', function (req, res) {
     )
 });
 
-
-
 // // delete a member
 // app.delete('/api/reviews/:review_id', function(req, res) {
 //     Review.remove({
