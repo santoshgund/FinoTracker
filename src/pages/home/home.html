@@ -7,7 +7,7 @@
     </ion-navbar>
 </ion-header>
 <ion-content class="master no-scroll">
-    <ion-card>
+    <ion-card class="chart-container" >
         <ion-card-header text-center>
             FinoVision Dashboard
         </ion-card-header>
@@ -19,33 +19,37 @@
 
         
         <ion-row wrap>
-            <ion-col col-6 col-center>
-                <ion-card text-center>
+            <ion-col col-6 col-center class="remove-padding">
+                <ion-card text-center class="lvl-height color-member">
                     <ion-card-content (click)="gotToMemberList()">
                         <ion-icon class="home-icon" name='people'></ion-icon>
+                        <br><label>Members</label>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
-            <ion-col col-6>
-                <ion-card text-center>
+            <ion-col col-6 class="remove-padding">
+                <ion-card text-center class="lvl-height color-passbook">
                     <ion-card-content (click)="gotToMemberPassbook()">
                         <ion-icon name="book" class="home-icon"></ion-icon>
+                        <br><label>Passbook</label>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
         </ion-row>
         <ion-row wrap>
-            <ion-col col-6>
-                <ion-card text-center>
+            <ion-col col-6 class="remove-padding"> 
+                <ion-card text-center class="lvl-height color-report">
                     <ion-card-content>
                         <ion-icon name="paper" class="home-icon"></ion-icon>
+                        <br><label>Report</label>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
-            <ion-col col-6>
-                <ion-card text-center>
+            <ion-col col-6 class="remove-padding">
+                <ion-card text-center class="lvl-height color-history">
                     <ion-card-content>
                         <ion-icon name="clipboard" class="home-icon"></ion-icon>
+                        <br> <label>Transaction History</label>
                     </ion-card-content>
                 </ion-card>
             </ion-col>

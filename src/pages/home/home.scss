@@ -7,8 +7,42 @@ home {
     }
     .home-icon {
         font-size: 60px; // color: lightcoral;
-        color: tomato;
+        color: #fff;
     }
+    
+   .lvl-height{
+        height: 127px;
+        width: calc(100% - 7px);
+        margin: 12px 0px -5px 3px;
+        box-shadow:none;
+       color:#fff;
+    }
+    .color-member{
+        background: #78E4D4
+    }
+    .color-passbook{
+        background: #20ACD2
+    }
+    .color-report{
+        background: #C6BAE9
+    }
+    .color-history{
+        background: #EAC3DE
+    }
+    .remove-padding{
+        padding: 0 !important;
+
+    }
+    .card-content-ios, .card-content-md {
+        padding:23px 16px 14px
+    }
+    .card-content-wp {
+    padding: 16px;
+    }
+.chart-container{
+    box-shadow: none;
+}
+
     ::-webkit-scrollbar,
     *::-webkit-scrollbar {
         display: none;

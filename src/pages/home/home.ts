@@ -59,12 +59,12 @@ export class HomePage {
                 label: '# of Votes',
                 data: [12, 19, 3, 5],
                 backgroundColor: [
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56',
-                    '#4CAF50'
+                    '#4CAF50',
+                    '#FF6E40',
+                    '#FFEA00',
+                    '#FE5151'
                 ],
-                hoverBackgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(255, 206, 86, 0.2)", "#81C784"]
+                hoverBackgroundColor: ["#81C784", "#FF7043", "#FFEE58", "#FAA0A1"]
 
             }]
         };

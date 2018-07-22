@@ -60,8 +60,23 @@
         }
     }
     .toolbar-background {
-        background-color: lightseagreen;
+        background-color: #fff;
     }
+    .header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios {
+        border-bottom: 0
+    }
+    .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+        background-image: none;
+    }
+    .searchbar-md .searchbar-input {
+        box-shadow: none;
+    }
+     
+    .toolbar-title.toolbar-title-md,.back-button, .toolbar-title.toolbar-title-ios, .toolbar-title.toolbar-title-wp,.ion-ios-menu, .ion-wp-menu, .ion-md-menu, .back-button-icon{
+        color:#333 !important;
+    }
+    
+    
     $colors: ( primary: #488aff, secondary: #32db64, danger: #f53d3d, light: #f4f4f4, dark: #222, custom: #777);
     .toolbar-title.toolbar-title-md,
     .toolbar-title.toolbar-title-ios,
