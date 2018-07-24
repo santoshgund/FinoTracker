@@ -2,23 +2,16 @@ import { Component, ViewChild } from '@angular/core';
 
 import { Events, MenuController, Nav, Platform } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { Storage } from '@ionic/storage';
-
-import { AboutPage } from '../pages/about/about';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
-import { MapPage } from '../pages/map/map';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
-import { SchedulePage } from '../pages/schedule/schedule';
-import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { SupportPage } from '../pages/support/support';
 import { MembersPage } from '../pages/members/members';
 import { HomePage } from '../pages/home/home';
-
-
+import { MemberPassbookPage } from '../pages/member-passbook/member-passbook';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 
@@ -41,19 +34,12 @@ export class ConferenceApp {
   // @ViewChild(Nav) gets a reference to the app's root nav
   @ViewChild(Nav) nav: Nav;
 
-  // List of pages that can be navigated to from the left menu
-  // the left menu only works after login
-  // the login page disables the left menu
-  appPages: PageInterface[] = [
-    { title: 'Schedule', name: 'TabsPage', component: TabsPage, tabComponent: SchedulePage, index: 0, icon: 'calendar' },
-    { title: 'Speakers', name: 'TabsPage', component: TabsPage, tabComponent: SpeakerListPage, index: 1, icon: 'contacts' },
-    { title: 'Map', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' },
-    { title: 'About', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 3, icon: 'information-circle' }
-  ];
-
   memberPages: PageInterface[] = [
-    { title: 'Home', name: 'HomePage', component: HomePage, icon: 'home' },
-    { title: 'Members', name: 'MembersPage', component: MembersPage, icon: 'person' }
+    { title: 'Home', name: 'TabsPage', component: TabsPage, tabComponent: HomePage, icon: 'home', index: 0 },
+    { title: 'Members',name: 'TabsPage', component: TabsPage, tabComponent: MembersPage, icon: 'person', index: 1 },
+    { title: 'Passbook', name: 'TabsPage', component: TabsPage, tabComponent: MemberPassbookPage, icon: 'book', index: 2 }
+    // { title: 'FinoVision Passbook', name: 'TabsPage', component: TabsPage, icon: 'person', tabComponent: MemberPassbookPage,index:3 }
+
   ];
 
   loggedInPages: PageInterface[] = [
@@ -82,8 +68,8 @@ export class ConferenceApp {
     this.storage.get('hasSeenTutorial')
       .then((hasSeenTutorial) => {
         if (hasSeenTutorial) {
-          //this.rootPage = TabsPage;
-          this.rootPage = HomePage;
+          this.rootPage = TabsPage;
+          //this.rootPage = HomePage;
         } else {
           this.rootPage = TutorialPage;
         }

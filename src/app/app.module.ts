@@ -11,17 +11,17 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Camera } from '@ionic-native/camera';
 import { ConferenceApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { PopoverPage } from '../pages/about-popover/about-popover';
+// import { AboutPage } from '../pages/about/about';
+// import { PopoverPage } from '../pages/about-popover/about-popover';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
-import { MapPage } from '../pages/map/map';
-import { SchedulePage } from '../pages/schedule/schedule';
-import { ScheduleFilterPage } from '../pages/schedule-filter/schedule-filter';
-import { SessionDetailPage } from '../pages/session-detail/session-detail';
+// import { MapPage } from '../pages/map/map';
+// import { SchedulePage } from '../pages/schedule/schedule';
+// import { ScheduleFilterPage } from '../pages/schedule-filter/schedule-filter';
+// import { SessionDetailPage } from '../pages/session-detail/session-detail';
 import { SignupPage } from '../pages/signup/signup';
-import { SpeakerDetailPage } from '../pages/speaker-detail/speaker-detail';
-import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
+// import { SpeakerDetailPage } from '../pages/speaker-detail/speaker-detail';
+// import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SupportPage } from '../pages/support/support';
@@ -32,26 +32,27 @@ import { EditProfilePage } from '../pages/member-details/edit-profile/edit-profi
 import { EditProfilePopoverPage } from '../pages/member-details/edit-profile-popover/edit-profile-popover';
 import { HomePage } from '../pages/home/home';
 
-import { ConferenceData } from '../providers/conference-data';
+ import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 import { MemberData } from '../providers/member-data';
 import { MemberPassbookPage } from "../pages/member-passbook/member-passbook";
+import{AddPassbookPage} from "../pages/member-passbook/add-passbook/add-passbook"
 
 
 @NgModule({
   declarations: [
     ConferenceApp,
-    AboutPage,
+    // AboutPage,
     AccountPage,
     LoginPage,
-    MapPage,
-    PopoverPage,
-    SchedulePage,
-    ScheduleFilterPage,
-    SessionDetailPage,
+    // MapPage,
+    // PopoverPage,
+    // SchedulePage,
+    // ScheduleFilterPage,
+    // SessionDetailPage,
     SignupPage,
-    SpeakerDetailPage,
-    SpeakerListPage,
+    // SpeakerDetailPage,
+    // SpeakerListPage,
     TabsPage,
     TutorialPage,
     SupportPage,
@@ -61,7 +62,8 @@ import { MemberPassbookPage } from "../pages/member-passbook/member-passbook";
     EditProfilePage,
     EditProfilePopoverPage,
     HomePage,
-    MemberPassbookPage
+    MemberPassbookPage,
+    AddPassbookPage
 
   ],
   imports: [
@@ -70,13 +72,13 @@ import { MemberPassbookPage } from "../pages/member-passbook/member-passbook";
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
-        { component: SchedulePage, name: 'Schedule', segment: 'schedule' },
-        { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:sessionId' },
-        { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
-        { component: SpeakerListPage, name: 'SpeakerList', segment: 'speakerList' },
-        { component: SpeakerDetailPage, name: 'SpeakerDetail', segment: 'speakerDetail/:speakerId' },
-        { component: MapPage, name: 'Map', segment: 'map' },
-        { component: AboutPage, name: 'About', segment: 'about' },
+        // { component: SchedulePage, name: 'Schedule', segment: 'schedule' },
+        // { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:sessionId' },
+        // { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
+        // { component: SpeakerListPage, name: 'SpeakerList', segment: 'speakerList' },
+        // { component: SpeakerDetailPage, name: 'SpeakerDetail', segment: 'speakerDetail/:speakerId' },
+        // { component: MapPage, name: 'Map', segment: 'map' },
+        // { component: AboutPage, name: 'About', segment: 'about' },
         { component: TutorialPage, name: 'Tutorial', segment: 'tutorial' },
         { component: SupportPage, name: 'SupportPage', segment: 'support' },
         { component: LoginPage, name: 'LoginPage', segment: 'login' },
@@ -87,7 +89,9 @@ import { MemberPassbookPage } from "../pages/member-passbook/member-passbook";
         { component: MemberCreatePage, name: 'MembersCreatePage', segment: 'membersCreate' },
         { component: EditProfilePage, name: 'EditProfilePage', segment: 'editPrifile' },
         { component: HomePage, name: 'HomePage', segment: 'homePage' },
-        { component: MemberPassbookPage, name: 'MemberPassbookPage', segment: 'passbook' }
+        { component: MemberPassbookPage, name: 'MemberPassbookPage', segment: 'passbook' },
+        { component: AddPassbookPage, name: 'AddPassbookPage', segment: 'addPassbook' }
+        
 
       ]
     }),
@@ -96,17 +100,17 @@ import { MemberPassbookPage } from "../pages/member-passbook/member-passbook";
   bootstrap: [IonicApp],
   entryComponents: [
     ConferenceApp,
-    AboutPage,
+    //AboutPage,
     AccountPage,
     LoginPage,
-    MapPage,
-    PopoverPage,
-    SchedulePage,
-    ScheduleFilterPage,
-    SessionDetailPage,
+    // MapPage,
+    // PopoverPage,
+    // SchedulePage,
+    // ScheduleFilterPage,
+    // SessionDetailPage,
     SignupPage,
-    SpeakerDetailPage,
-    SpeakerListPage,
+    // SpeakerDetailPage,
+    // SpeakerListPage,
     TabsPage,
     TutorialPage,
     SupportPage,
@@ -116,7 +120,8 @@ import { MemberPassbookPage } from "../pages/member-passbook/member-passbook";
     EditProfilePage,
     EditProfilePopoverPage,
     HomePage,
-    MemberPassbookPage
+    MemberPassbookPage,
+    AddPassbookPage
 
   ],
   providers: [

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AddPassbookPage } from './add-passbook/add-passbook'
 
 /**
  * Generated class for the MemberPassbookPage page.
@@ -22,6 +23,6 @@ export class MemberPassbookPage {
     console.log('ionViewDidLoad MemberPassbookPage');
   }
   addTransaction() {
-
+    this.navCtrl.push(AddPassbookPage);
   }
 }

@@ -8,6 +8,8 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 var cors = require('cors');
 
 // Configuration
+// mongoose.connect('mongodb://localhost/FinoVision');
+// var uri="mongodb+srv://santoshgund:BeTheSmarter@2018#@cluster0-shard-00-02-hpl9l.mongodb.net:27017/FinoVision?retryWrites=true";
 mongoose.connect('mongodb://localhost/FinoVision');
 
 app.use(morgan('dev'));                                         // log every request to the console

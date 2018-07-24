@@ -6,6 +6,9 @@
 -->
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Member Passbook</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="addTransaction()">
@@ -14,14 +17,7 @@
     </ion-buttons>
   </ion-navbar>
 
-  <ion-card>
-    <ion-card-header>
-      Header
-    </ion-card-header>
-    <ion-card-content>
-      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-    </ion-card-content>
-  </ion-card>
+  <div class="passbook-header"></div>
 
 </ion-header>
 

@@ -43,7 +43,7 @@ export class MemberCreatePage {
             this.form = this.formBuilder.group({
                 profilePic: [''],
                 memberName: ['', Validators.required],
-                memberId: ['FV' + this.nextMemberId],
+                memberId: ['FV'],
                 contactNumber: ['', Validators.required],
                 accountnumber: [''],
                 bankBranch: [''],

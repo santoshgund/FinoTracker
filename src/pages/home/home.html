@@ -7,17 +7,30 @@
     </ion-navbar>
 </ion-header>
 <ion-content class="master no-scroll">
-    <ion-card class="chart-container" >
+    <ion-card class="chart-container">
         <ion-card-header text-center>
-            FinoVision Dashboard
+            Personal Dashboard
         </ion-card-header>
         <ion-card-content>
             <canvas #halfDoughnutCanvas></canvas>
         </ion-card-content>
     </ion-card>
-    <ion-grid>
 
-        
+    <ion-card>
+        <ion-card-header text-center>
+            FinoVision Dashboard
+        </ion-card-header>
+        <ion-card-content>
+            <canvas #barCanvas></canvas>
+        </ion-card-content>
+    </ion-card>
+    <!--<ion-card>
+        <ion-card-content>
+            <canvas #pieCanvas width="800" height="450"></canvas>
+        </ion-card-content>
+    </ion-card>-->
+
+    <!--<ion-grid>
         <ion-row wrap>
             <ion-col col-6 col-center class="remove-padding">
                 <ion-card text-center class="lvl-height color-member">
@@ -37,7 +50,7 @@
             </ion-col>
         </ion-row>
         <ion-row wrap>
-            <ion-col col-6 class="remove-padding"> 
+            <ion-col col-6 class="remove-padding">
                 <ion-card text-center class="lvl-height color-report">
                     <ion-card-content>
                         <ion-icon name="paper" class="home-icon"></ion-icon>
@@ -54,10 +67,6 @@
                 </ion-card>
             </ion-col>
         </ion-row>
-    </ion-grid>
+    </ion-grid>-->
+
 </ion-content>
-<!--<ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>
-</ion-footer>-->
