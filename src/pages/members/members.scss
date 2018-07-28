@@ -32,6 +32,9 @@ members {
      border-radius: 7px !important;
      box-shadow: 0px 3px 40px #ccc;
    }
+   ion-item-sliding .item:last-child {
+     margin-bottom: 10px !important;
+   }
    ion-avatar, ion-avatar img {
      width: 70px !important;
      height: 70px !important;
