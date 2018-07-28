@@ -1,16 +1,24 @@
 <ion-header>
   <ion-navbar>
-      <ion-title>Edit Member</ion-title>
+      <ion-title text-center>Edit Member</ion-title>
+      <ion-buttons end>
+          <button class="edit-btn" ion-button icon-only >
+            <ion-icon name="create"></ion-icon>
+          </button>
+        </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
    <div text-center class="speaker-detail">
-      <img style="cursor:pointer" src={{memberDetails?.profilePic}} (click)="editProfilePicture()"><br>
+     <div class="img-layer">
+        <img style="cursor:pointer"class="circle" src={{memberDetails?.profilePic}} (click)="editProfilePicture()"><br>
+      </div>
       <!--<a href="#">edit</a>-->
-      <a style="cursor:pointer" ion-link color="primary" (click)="editProfilePicture()">edit</a>
+      <a style="cursor:pointer;display: inline-block;margin-top: 5px;" ion-link color="primary" (click)="editProfilePicture()">edit</a>
       <!--<button (click)="editProfilePicture()"></button>-->
   </div>
+<div class="form-container">
   <ion-list>
       <ion-item >
         <h2>Member Id</h2>
@@ -60,4 +68,5 @@
         <p item-end>{{memberDetails?.chequeNumber}}</p>
       </ion-item>
   </ion-list>
+</div>
 </ion-content>
