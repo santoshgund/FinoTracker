@@ -1,7 +1,14 @@
 page-member-passbook {
     .passbook-header {
         width: 100%;
-        background-color: lightseagreen;
+        background-color: transparent;
         height: 115px;
     }
+    ion-content {
+        background: #ffffff url("../../assets/img/passbook-bg.png") no-repeat 0px 0px fixed !important;
+         -webkit-background-size: 420px 270px !important;
+         -moz-background-size: 420px 270px !important;
+         background-size: 420px 270px !important;
+         
+      }
 }

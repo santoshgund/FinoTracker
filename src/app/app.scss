@@ -1,5 +1,7 @@
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
 // Makes the @content apply to the given breakpoint and narrower.
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
     $max: breakpoint-max($name, $breakpoints);
     @if $max {
@@ -11,18 +13,8 @@
         @content;
     }
 }
-@font-face {
-    font-family: 'montserratblack';
-    src: url('../assets/fonts/montserrat-black-webfont.woff2') format('woff2'),
-         url('../assets/fonts/montserrat-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-html,body {
-   
-    font-family: 'montserratblack', sans-serif !important;
-
+* {
+    font-family: 'Montserrat', 'Roboto',sans-serif;
 }
 .bar-button-menutoggle span.button-inner {
     display: none;
@@ -31,6 +23,13 @@ html,body {
     background: url('../../assets/img/menu-icon.png') no-repeat;
     width: 32px;
     height: 32px;
+  }
+  .toolbar-title {
+      font-size: 18px;
+      font-weight: bold;
+  }
+  .md ion-menu[type=overlay] .menu-inner{
+      border-radius: 0px 30px 30px 0px !important;
   }
 // Name of the next breakpoint, or null for the last breakpoint.
 //
@@ -115,4 +114,12 @@ html,body {
     .toolbar  .searchbar-input {
         background: whitesmoke!important;
     }
+    .tabbar {
+        background: #ffffff !important;
+        box-shadow: 0px 3px 50px -7px #000000 !important
+    }
+    .tabs-ios .tabbar {
+        border-top:0 !important; 
+    }
+   
 }
