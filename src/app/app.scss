@@ -24,7 +24,14 @@ html,body {
     font-family: 'montserratblack', sans-serif !important;
 
 }
-
+.bar-button-menutoggle span.button-inner {
+    display: none;
+  }
+  .bar-button-menutoggle {
+    background: url('../../assets/img/menu-icon.png') no-repeat;
+    width: 32px;
+    height: 32px;
+  }
 // Name of the next breakpoint, or null for the last breakpoint.
 //
 //    >> breakpoint-next(sm)

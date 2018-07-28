@@ -1,7 +1,7 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>Create</ion-title>
+        <ion-title text-center>ADD MEMBER</ion-title>
         <ion-buttons start>
             <button ion-button (click)="cancel()">
         <span color="primary" showWhen="ios">
@@ -28,17 +28,14 @@
         <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files[]" (change)="processWebImage($event)" />
         <div class="profile-image-wrapper" (click)="getPicture()">
             <div class="profile-image-placeholder" *ngIf="!this.form.controls.profilePic.value">
-                <ion-icon name="add"></ion-icon>
-                <div>
-                    Choose Image
-                </div>
+                <img src="../../assets/img/camera-icon.png" alt="">
             </div>
             <div class="profile-image" [style.backgroundImage]="getProfileImageStyle()" *ngIf="this.form.controls.profilePic.value"></div>
         </div>
-        <ion-list>
-            <ion-item>
+       <div class="form-container">
+            <!-- <ion-item>
                 <ion-input placeholder="Member Id" [readonly]=true formControlName="memberId"></ion-input>
-            </ion-item>
+            </ion-item> -->
             <ion-item>
                 <ion-input placeholder="Name" clearInput formControlName="memberName"></ion-input>
             </ion-item>
@@ -67,6 +64,6 @@
                 <ion-label clearInput style="color:#a0a0a0">Is Admin</ion-label>
                 <ion-toggle (ionChange)="isDisabled = !isDisabled" ></ion-toggle>
             </ion-item>
-        </ion-list>
+        </div>
     </form>
 </ion-content>

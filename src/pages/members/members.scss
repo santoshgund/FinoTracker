@@ -55,7 +55,7 @@ members {
      background-color: transparent;
    }
   ion-content > div.scroll-content {
-    margin-top: 260px !important;
+    margin-top: 180px !important;
   }
   .item-wrapper .item-block,.item-block .item-inner {
     border: 0px !important;
@@ -74,6 +74,7 @@ members {
     border-radius: 50px !important;
     
   }
+  
   .searchbar-input-container {
     width: 75%;
     margin: 0 auto;
@@ -110,7 +111,7 @@ members {
   }
 
    ion-content {
-       background: #f9f9f9 url("../../assets/img/member-list-bg.png") no-repeat 0px 0px fixed !important;
+       background: #ffffff url("../../assets/img/member-list-bg.png") no-repeat 0px 0px fixed !important;
         -webkit-background-size: 420px 270px !important;
         -moz-background-size: 420px 270px !important;
         background-size: 420px 270px !important;
