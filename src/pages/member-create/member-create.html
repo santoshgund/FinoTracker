@@ -28,7 +28,7 @@
         <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files[]" (change)="processWebImage($event)" />
         <div class="profile-image-wrapper" (click)="getPicture()">
             <div class="profile-image-placeholder" *ngIf="!this.form.controls.profilePic.value">
-                <img src="../../assets/img/camera-icon.png" alt="">
+                <img src="../assets/img/camera-icon.png" alt="">
             </div>
             <div class="profile-image" [style.backgroundImage]="getProfileImageStyle()" *ngIf="this.form.controls.profilePic.value"></div>
         </div>

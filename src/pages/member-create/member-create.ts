@@ -40,22 +40,24 @@ export class MemberCreatePage {
         this.memberService.getNextMemberId().then((data) => {
             this.nextMemberId = data.length;
             this.isReadonly = this.nextMemberId > 0 ? true : false
-            this.form = this.formBuilder.group({
-                profilePic: [''],
-                memberName: ['', Validators.required],
-                memberId: ['FV'],
-                contactNumber: ['', Validators.required],
-                accountnumber: [''],
-                bankBranch: [''],
-                ifscCode: [''],
-                phonePayNumner: ['', Validators.required],
-                chequeNumber: [''],
-                emailAddress: ['']
-            });
 
-            this.form.valueChanges.subscribe(() => {
-                this.isReadyToSave = this.form.valid;
-            });
+        });
+
+        this.form = this.formBuilder.group({
+            profilePic: [''],
+            memberName: ['', Validators.required],
+            memberId: ['FV' + this.nextMemberId != null || this.nextMemberId != '' ? this.nextMemberId : ""],
+            contactNumber: ['', Validators.required],
+            accountnumber: [''],
+            bankBranch: [''],
+            ifscCode: [''],
+            phonePayNumner: ['', Validators.required],
+            chequeNumber: [''],
+            emailAddress: ['']
+        });
+
+        this.form.valueChanges.subscribe(() => {
+            this.isReadyToSave = this.form.valid;
         });
     }
 

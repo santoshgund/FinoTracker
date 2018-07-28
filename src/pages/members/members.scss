@@ -105,13 +105,13 @@ members {
     position: relative !important;
     float: right !important;
     margin-right: 21px !important;
-    background: url('../../assets/img/search-icon.png') no-repeat !important;
+    background: url('../assets/img/search-icon.png') no-repeat !important;
   }
 
   }
 
    ion-content {
-       background: #ffffff url("../../assets/img/member-list-bg.png") no-repeat 0px 0px fixed !important;
+       background: #ffffff url("../assets/img/member-list-bg.png") no-repeat 0px 0px fixed !important;
         -webkit-background-size: 420px 270px !important;
         -moz-background-size: 420px 270px !important;
         background-size: 420px 270px !important;
