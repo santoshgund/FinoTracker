@@ -29,15 +29,15 @@ members {
   }
    ion-item-sliding .item:nth-child(even),ion-item-sliding:nth-child(even) {
      background-color: #fff !important;
-     border-radius: 4px !important;
-     box-shadow: -11px 8px 33px #ccc
+     border-radius: 7px !important;
+     box-shadow: 0px 3px 21px #eee;
    }
    ion-item-sliding.item-wrapper:last-child {
      margin-bottom: 20px !important;
    }
    ion-avatar, ion-avatar img {
-     width: 70px !important;
-     height: 70px !important;
+     width: 40px !important;
+     height: 40px !important;
    }
    .scroll-content ion-list.list {
      margin: 0px 40px !important;
@@ -115,6 +115,9 @@ members {
         -moz-background-size: 420px 270px !important;
         background-size: 420px 270px !important;
         
+    }
+    .item-inner{
+      background-position: right 0px center!important;
     }
 }
 
