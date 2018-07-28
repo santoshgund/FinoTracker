@@ -29,11 +29,11 @@ members {
   }
    ion-item-sliding .item:nth-child(even),ion-item-sliding:nth-child(even) {
      background-color: #fff !important;
-     border-radius: 7px !important;
-     box-shadow: 0px 3px 40px #ccc;
+     border-radius: 4px !important;
+     box-shadow: -11px 8px 33px #ccc
    }
-   ion-item-sliding .item:last-child {
-     margin-bottom: 10px !important;
+   ion-item-sliding.item-wrapper:last-child {
+     margin-bottom: 20px !important;
    }
    ion-avatar, ion-avatar img {
      width: 70px !important;
@@ -55,7 +55,7 @@ members {
      background-color: transparent;
    }
   ion-content > div.scroll-content {
-    margin-top: 200px !important;
+    margin-top: 260px !important;
   }
   .item-wrapper .item-block,.item-block .item-inner {
     border: 0px !important;
@@ -72,16 +72,19 @@ members {
   .toolbar .searchbar-input {
     background: #fff !important;
     border-radius: 50px !important;
-    margin-top: 26px !important;
+    
+  }
+  .searchbar-input-container {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: -10px !important;
   }
   .searchbar-search-icon {
-    left: 326px !important;
     top: 38px !important;
     width: 24px !important;
     height: 24px !important;
   }
   .searchbar-ios .searchbar-search-icon {
-    left: 316px !important;
     top: 37px !important;
   }
   .searchbar-input {
@@ -95,9 +98,12 @@ members {
   }
   .searchbar-ios .searchbar-input {
     padding: 21px 25px !important;
-    margin-top: 18px !important;
+   
   }
   .searchbar-search-icon {
+    position: relative !important;
+    float: right !important;
+    margin-right: 21px !important;
     background: url('../../assets/img/search-icon.png') no-repeat !important;
   }
 

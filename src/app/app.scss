@@ -11,6 +11,19 @@
         @content;
     }
 }
+@font-face {
+    font-family: 'montserratblack';
+    src: url('../assets/fonts/montserrat-black-webfont.woff2') format('woff2'),
+         url('../assets/fonts/montserrat-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html,body {
+   
+    font-family: 'montserratblack', sans-serif !important;
+
+}
 
 // Name of the next breakpoint, or null for the last breakpoint.
 //
