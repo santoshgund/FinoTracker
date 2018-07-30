@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IonicPage, NavController, ViewController } from 'ionic-angular';
 import { Camera } from '@ionic-native/camera';
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Crop } from '@ionic-native/crop';
 
 import { MemberData } from '../../providers/member-data';
 
@@ -21,12 +23,15 @@ export class MemberCreatePage {
     isDisabled = true;
     isReadonly = false;
     nextMemberId: any;
+    photos:any;
 
     constructor(
         public navCtrl: NavController,
         public viewCtrl: ViewController,
         public formBuilder: FormBuilder,
         public camera: Camera,
+        public imagePicker: ImagePicker,
+        public cropService:Crop,
         public memberService: MemberData) {
 
 
@@ -66,18 +71,39 @@ export class MemberCreatePage {
     }
     getPicture() {
         if (Camera['installed']()) {
-            this.camera.getPicture({
-                destinationType: this.camera.DestinationType.DATA_URL,
-                targetWidth: 96,
-                targetHeight: 96
-            }).then((data) => {
-                this.form.patchValue({ 'profilePic': 'data:image/jpg;base64,' + data });
-            }, () => {
-                alert('Unable to take photo');
-            })
+            // this.camera.getPicture({
+            //     destinationType: this.camera.DestinationType.DATA_URL,
+            //     targetWidth: 96,
+            //     targetHeight: 96
+            // }).then((data) => {
+            //     this.form.patchValue({ 'profilePic': 'data:image/jpg;base64,' + data });
+            // }, () => {
+            //     alert('Unable to take photo');
+            // })
+
+            let options = {
+                maximumImagesCount: 1,
+            }
+            this.photos = new Array<string>();
+            this.imagePicker.getPictures(options)
+                .then((results) => {
+                    this.reduceImages(results).then(() => {
+                        console.log('all images cropped!!');
+                    });
+                }, (err) => { console.log(err) });
+
         } else {
             this.fileInput.nativeElement.click();
         }
+    }
+
+    reduceImages(selected_pictures: any): any {
+        return selected_pictures.reduce((promise: any, item: any) => {
+            return promise.then(() => {
+                return this.cropService.crop(item, { quality: 75 })
+                    .then(cropped_image => this.photos.push(cropped_image));
+            });
+        }, Promise.resolve());
     }
 
     processWebImage(event) {

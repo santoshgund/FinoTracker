@@ -22,6 +22,9 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 // import { SpeakerDetailPage } from '../pages/speaker-detail/speaker-detail';
 // import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Crop } from '@ionic-native/crop';
+
 import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SupportPage } from '../pages/support/support';
@@ -131,7 +134,9 @@ import{AddPassbookPage} from "../pages/member-passbook/add-passbook/add-passbook
     MemberData,
     InAppBrowser,
     SplashScreen,
-    Camera
+    Camera,
+    ImagePicker,
+    Crop
   ]
 })
 export class AppModule { }
