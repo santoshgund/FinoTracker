@@ -45,7 +45,7 @@ export class HomePage {
 
     single1 = [{ "name": "Own Share", "value": 26000 }, { "name": "Interest", "value": 1500 }, { "name": "Penulty", "value": 9 }];
 
-     single2 = [{ "name": "Share", "value": 320000 }, { "name": "Interest", "value": 125000 },  { "name": "Available", "value": 180000 }];
+     single2 = [{ "name": "Share", "value": 290000 }, { "name": "Interest", "value": 125000 },  { "name": "Available", "value": 180000 }];
     
     // multi1 = [{
     //     "name": "Germany", "series": [{ "name": "2010", "value": 7300000 }, { "name": "2011", "value": 8940000 }]
