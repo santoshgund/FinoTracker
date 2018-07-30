@@ -40,6 +40,8 @@ import { UserData } from '../providers/user-data';
 import { MemberData } from '../providers/member-data';
 import { MemberPassbookPage } from "../pages/member-passbook/member-passbook";
 import{AddPassbookPage} from "../pages/member-passbook/add-passbook/add-passbook"
+import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -72,6 +74,8 @@ import{AddPassbookPage} from "../pages/member-passbook/add-passbook/add-passbook
   imports: [
     BrowserModule,
     HttpModule,
+    NgxChartsModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
@@ -137,6 +141,8 @@ import{AddPassbookPage} from "../pages/member-passbook/add-passbook/add-passbook
     Camera,
     ImagePicker,
     Crop
+    // ,single,
+    // multi
   ]
 })
 export class AppModule { }

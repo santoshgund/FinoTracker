@@ -11,17 +11,29 @@
         <ion-card-header text-center>
             Personal Dashboard
         </ion-card-header>
-        <ion-card-content>
+        <!--<ion-card-content>
             <canvas #halfDoughnutCanvas></canvas>
+        </ion-card-content>-->
+        <ion-card-content>
+            <ngx-charts-advanced-pie-chart *ngIf="chartData" [view]="view" [scheme]="colorScheme" [results]="single1" (select)="onSelect($event)"></ngx-charts-advanced-pie-chart>
         </ion-card-content>
     </ion-card>
 
-    <ion-card>
+    <!--<ion-card>
         <ion-card-header text-center>
             FinoVision Dashboard
         </ion-card-header>
         <ion-card-content>
             <canvas #barCanvas></canvas>
+        </ion-card-content>
+    </ion-card>-->
+
+    <ion-card>
+
+        <ion-card-content>
+            <ngx-charts-pie-chart *ngIf="chartData" [view]="view" [scheme]="colorScheme" [results]="single2" [legend]="showLegend" [explodeSlices]="explodeSlices"
+                [labels]="showLabels" [doughnut]="doughnut" (select)="onSelect($event)">
+            </ngx-charts-pie-chart>
         </ion-card-content>
     </ion-card>
     <!--<ion-card>

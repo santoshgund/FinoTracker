@@ -4,7 +4,6 @@ import { Chart } from 'chart.js';
 import { MembersPage } from '../members/members';
 import { MemberPassbookPage } from "../member-passbook/member-passbook";
 
-
 @Component({
     selector: 'home',
     templateUrl: 'home.html'
@@ -26,40 +25,75 @@ export class HomePage {
     yAxixThreshold: number;
     mySelectedIndex: number;
 
+    single: any[];
+    multi: any[];
+
+    view: any[] = [300, 180];
+
+    // options
+    showLegend = true;
+
+    colorScheme = {
+        domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    };
+
+    // pie
+    showLabels = true;
+    explodeSlices = true;
+    doughnut = false;
+    chartData = false;
+
+    single1 = [{ "name": "Own Share", "value": 26000 }, { "name": "Interest", "value": 1500 }, { "name": "Penulty", "value": 9 }];
+
+     single2 = [{ "name": "Share", "value": 320000 }, { "name": "Interest", "value": 125000 },  { "name": "Available", "value": 180000 }];
+    
+    // multi1 = [{
+    //     "name": "Germany", "series": [{ "name": "2010", "value": 7300000 }, { "name": "2011", "value": 8940000 }]
+    // }, {
+    //     "name": "USA", "series": [{ "name": "2010", "value": 7870000 },
+    //     { "name": "2011", "value": 8270000 }]
+    // }, { "name": "France", "series": [{ "name": "2010", "value": 5000002 }, { "name": "2011", "value": 5800000 }] }];
+
+
     constructor(public nav: NavController, navParams: NavParams) {
         this.mySelectedIndex = navParams.data.tabIndex || 0;
         this.yAxixThreshold = 227000;
     }
 
+    onSelect(event) {
+        console.log(event);
+    }
 
     ionViewDidLoad() {
-        this.createBarChart();
+        //this.createBarChart();
         //this.createPieChart();
 
-        Chart.pluginService.register({
-            beforeDraw: function (chart) {
-                if (chart.config.type === 'doughnut') {
-                    var data = chart.data.datasets[0].data;
-                    var sum = data.reduce(function (a, b) {
-                        return a + b;
-                    }, 0);
-                    var width = chart.chart.width,
-                        height = chart.chart.height,
-                        ctx = chart.chart.ctx;
-                    ctx.restore();
-                    var fontSize = (height / 10).toFixed(2);
-                    ctx.font = fontSize + "px Arial";
-                    ctx.textBaseline = "middle";
-                    var text = sum,
-                        textX = Math.round((width - ctx.measureText(text).width) / 2),
-                        textY = height - 15;
-                    ctx.fillText(text, textX, textY);
-                    ctx.save();
-                }
-            }
-        });
-        this.halfDoughnutChart = this.getHalfDoughnutChart();
+        // Chart.pluginService.register({
+        //     beforeDraw: function (chart) {
+        //         if (chart.config.type === 'doughnut') {
+        //             var data = chart.data.datasets[0].data;
+        //             var sum = data.reduce(function (a, b) {
+        //                 return a + b;
+        //             }, 0);
+        //             var width = chart.chart.width,
+        //                 height = chart.chart.height,
+        //                 ctx = chart.chart.ctx;
+        //             ctx.restore();
+        //             var fontSize = (height / 10).toFixed(2);
+        //             ctx.font = fontSize + "px Arial";
+        //             ctx.textBaseline = "middle";
+        //             var text = sum,
+        //                 textX = Math.round((width - ctx.measureText(text).width) / 2),
+        //                 textY = height - 15;
+        //             ctx.fillText(text, textX, textY);
+        //             ctx.save();
+        //         }
+        //     }
+        // });
+        // this.halfDoughnutChart = this.getHalfDoughnutChart();
 
+        this.chartData = true;
+        //Object.assign(this, { single, multi })
     }
 
     createBarChart() {

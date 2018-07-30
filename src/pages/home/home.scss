@@ -9,51 +9,79 @@ home {
         font-size: 60px; // color: lightcoral;
         color: #fff;
     }
-    
-   .lvl-height{
+    .lvl-height {
         height: 127px;
         width: calc(100% - 7px);
         margin: 12px 0px -5px 3px;
-        box-shadow:none;
-       color:#fff;
+        box-shadow: none;
+        color: #fff;
     }
-    .color-member{
+    .color-member {
         background: #78E4D4
     }
-    .color-passbook{
+    .color-passbook {
         background: #20ACD2
     }
-    .color-report{
+    .color-report {
         background: #C6BAE9
     }
-    .color-history{
+    .color-history {
         background: #EAC3DE
     }
-    .remove-padding{
+    .remove-padding {
         padding: 0 !important;
-
     }
-    .card-content-ios, .card-content-md {
-        padding:23px 16px 14px
+    .card-content-ios,
+    .card-content-md {
+        padding: 23px 16px 14px
     }
     .card-content-wp {
-    padding: 16px;
+        padding: 16px;
     }
-.chart-container{
-    box-shadow: none;
-}
-
+    .chart-container {
+        box-shadow: none;
+    }
     ::-webkit-scrollbar,
     *::-webkit-scrollbar {
         display: none;
     }
-
-    
-   ion-content {
-       background: #f9f9f9 url("../assets/img/dashboard-bg.png") no-repeat 0px 0px fixed !important;
+    ion-content {
+        background: #f9f9f9 url("../assets/img/dashboard-bg.png") no-repeat 0px 0px fixed !important;
         -webkit-background-size: 420px 270px !important;
         -moz-background-size: 420px 270px !important;
         background-size: 420px 270px !important;
-        
+    }
+    ngx-charts-legend.chart-legend {
+        width: auto;
+        clear: both;
+        display: block;
+        margin: 0 auto;
+        &>div {
+            display: block;
+            width: auto !important;
+        }
+        .legend-wrap {
+            min-width: 200px;
+            text-align: center;
+            margin: 0 auto;
+            float: none;
+            ul {
+                display: -webkit-inline-box;
+            }
+        }
+        .legend-title {
+            display: none;
+        }
+        .legend-labels {
+            width: auto;
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+            background: none;
+            float: none;
+            padding: 0;
+            margin-left: -13%;
+            margin-top: -13%;
+        }
     }
 }
