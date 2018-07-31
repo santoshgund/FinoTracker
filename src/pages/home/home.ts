@@ -28,8 +28,8 @@ export class HomePage {
     single: any[];
     multi: any[];
 
-    view: any[] = [450, 180];
-
+    view: any[] = [400, 140];
+    view1: any[] = [450, 180];
     // options
     showLegend = true;
 
@@ -43,7 +43,7 @@ export class HomePage {
     doughnut = false;
     chartData = false;
 
-    single1 = [{ "name": "Own Share", "value": 26000 }, { "name": "Interest", "value": 1500 }, { "name": "Penulty", "value": 9 }];
+    single1 = [{ "name": "Own Share", "value": 26000 }, { "name": "Interest", "value": 15000 }, { "name": "Penulty", "value": 9000 }];
 
      single2 = [{ "name": "Share", "value": 290000 }, { "name": "Interest", "value": 125000 },  { "name": "Available", "value": 180000 }];
     
