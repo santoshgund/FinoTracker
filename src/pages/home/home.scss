@@ -123,4 +123,19 @@ home {
         font-size: 15px !important;
         color: #fc2111 !important;
     }
+    .legend-items-container{
+        top: 15px;
+        left:5%;
+        position: absolute;
+    }
+    .total-label{
+        position: absolute;
+        right: 20px;
+        top: -30px;
+    }
+    .total-value {
+        position: absolute;
+        right: 10px;
+        top: -60px;
+    }
 }
