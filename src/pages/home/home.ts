@@ -28,7 +28,7 @@ export class HomePage {
     single: any[];
     multi: any[];
 
-    view: any[] = [300, 180];
+    view: any[] = [450, 180];
 
     // options
     showLegend = true;
