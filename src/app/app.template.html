@@ -12,7 +12,7 @@
     <ion-content class="outer-content">
       <ion-list>
         <ion-list-header>
-          Members
+            Navigate
         </ion-list-header>
         <button ion-item menuClose *ngFor="let p of memberPages" (click)="openPage(p)">
           <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
@@ -21,9 +21,7 @@
       </ion-list>
       
       <ion-list>
-        <ion-list-header>
-          Navigate
-        </ion-list-header>
+       
         <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)">
           <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
           {{p.title}}
@@ -65,7 +63,7 @@
     <ion-content class="outer-content">
       <ion-list>
         <ion-list-header>
-          Members
+          Navigate
         </ion-list-header>
         <button ion-item menuClose *ngFor="let p of memberPages" (click)="openPage(p)">
           <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>

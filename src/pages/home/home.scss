@@ -46,12 +46,17 @@ home {
         font-weight: bold !important;
         color: #FFFFFF !important;
     }
+    .card-md + ion-card ,.card-ios + ion-card{
+        background: transparent;
+        margin-top: 50px;
+        box-shadow: none !important;
+    }
     ::-webkit-scrollbar,
     *::-webkit-scrollbar {
         display: none;
     }
     ion-content {
-        background: #f9f9f9 url("../assets/img/dashboard-bg.png") no-repeat 0px 0px fixed !important;
+        background: #f9f9f9 url("../assets/img/admin-dashboard-bg.png") no-repeat 0px 0px fixed !important;
         -webkit-background-size: 420px 270px !important;
         -moz-background-size: 420px 270px !important;
         background-size: 420px 270px !important;
@@ -138,4 +143,5 @@ home {
         right: 10px;
         top: -60px;
     }
+   
 }

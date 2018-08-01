@@ -8,6 +8,7 @@ import { UserData } from '../../providers/user-data';
 import { UserOptions } from '../../interfaces/user-options';
 
 import { TabsPage } from '../tabs-page/tabs-page';
+import { LoginPage } from '../login/login';
 
 
 @Component({
@@ -27,5 +28,8 @@ export class SignupPage {
       this.userData.signup(this.signup.username);
       this.navCtrl.push(TabsPage);
     }
+  }
+  onSignin(){
+    this.navCtrl.push(LoginPage)
   }
 }
